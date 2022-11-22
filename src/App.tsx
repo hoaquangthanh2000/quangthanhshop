@@ -1,6 +1,9 @@
 import React from "react";
+import { Routes, Route } from 'react-router-dom'
 import "./App.css";
-import ListProduct from "./components/ListProduct";
+import ListProduct from "./components/product/ListProduct";
+import Navbar from "./components/navbar/navbar";
+import ProductDetail from './components/product/ProductDetail';
 
 function App() {
   return (
@@ -8,7 +11,7 @@ function App() {
       <header className=" h-14 border shadow-md px-52 flex justify-around items-center">
         <div className="h-full w-full flex flex-row items-center">
           <div className=" text-xl text-red-500 font-semibold ">
-            Quang Thanh Shop
+            abc
           </div>
           <img
             src="https://cdn.pixabay.com/photo/2021/06/18/08/24/batman-6345505_1280.png"
@@ -22,7 +25,10 @@ function App() {
         </div>
       </header>
       <div className="">
-        <ListProduct/>
+        <Routes>
+          <Route path="/" element={<ListProduct/>} />
+          <Route path="/product/:productId" element={<ProductDetail />} />
+        </Routes>
       </div>
     </div>
   );
