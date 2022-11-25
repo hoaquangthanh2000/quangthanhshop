@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { productType } from "./typeitem";
 
 const initState = {
-  listProduct: [] as productType[]
+  listProduct: [] as productType[],
+  productSelect:{} as productType
 }
 
 export const productSlice = createSlice({
@@ -13,8 +14,13 @@ export const productSlice = createSlice({
       state.listProduct = (action.payload);
     },
     selectProduct: (state,action) => {
-      return {...state,...action.payload}
+      state.productSelect = (action.payload)
+    },
+    removeProduct: (state,action) => {
+      if(action.payload){
+        state.productSelect = initState.productSelect
+      }
     }
   },
 });
-export const { setProduct,selectProduct } = productSlice.actions;
+export const { setProduct,selectProduct,removeProduct } = productSlice.actions;

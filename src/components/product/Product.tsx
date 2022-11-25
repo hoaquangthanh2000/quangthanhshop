@@ -12,12 +12,12 @@ function Product(data: item) {
   // fetchProductDetail()
   return (
     <Link to={`/product/${data.product.id}`}>
-      <div className="flex flex-col w-60 p-7 border">
-        <img src={data.product.image} className="  h-56 p-4" alt="" />
-        <div className=" pt-2">
-          <p>{data.product.title}</p>
-          <p>{data.product.price}$</p>
-          <p>{data.product.category}</p>
+      <div className="flex flex-col border w-[225px] h-[350px]">
+        <img src={data.product.image} className="h-56 p-4" alt="" />
+        <div className=" pt-2 flex-1 ml-1">
+          <p className=" h-1/3 one-line-ellipsis leading-9">{data.product.title}</p>
+          <p className=" h-1/3 one-line-ellipsis leading-9">{data.product.price}$</p>
+          <p className=" h-1/3 one-line-ellipsis leading-9">{data.product.category}</p>
         </div>
       </div>
     </Link>

@@ -25,10 +25,12 @@ function ListProduct() {
   return (
     <div className="flex flex-row">
       <Navbar/>
-      <div className="grid grid-cols-4 gap-4 py-12 px-36">
+      <div className="flex flex-1 justify-center">
+      <div className="grid grid-cols-4 gap-4 py-12 mx-5">
         {listProduct.map((product) => {
           return <Product product={product} />;
         })}
+      </div>
       </div>
     </div>
   );
