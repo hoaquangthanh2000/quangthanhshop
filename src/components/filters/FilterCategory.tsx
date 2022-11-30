@@ -9,7 +9,7 @@ export default function FilterCategory() {
       <div className="text-lg my-4">Theo danh mục</div>
       <div className="pl-3">
       {categories.map((category, index) => (
-         <Category category={category}/>
+         <Category key={index} category={category}/>
        ))}
       </div>
     </div>

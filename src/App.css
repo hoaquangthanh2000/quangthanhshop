@@ -10,6 +10,13 @@
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
+  .nine-line-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+  }
 }
 /* .App {
   text-align: center;

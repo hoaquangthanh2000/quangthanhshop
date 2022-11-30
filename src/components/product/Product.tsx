@@ -1,7 +1,6 @@
 import axios from "axios";
 import { productSlice, setProduct } from "./productSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { productSeletor } from "../../app/seletor";
 import { productType } from "./typeitem";
 import { Link } from "react-router-dom";
 
