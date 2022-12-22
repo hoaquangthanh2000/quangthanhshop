@@ -17,6 +17,15 @@
     -webkit-line-clamp: 9;
     -webkit-box-orient: vertical;
   }
+
+  .two-line-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 30px;
+  }
 }
 /* .App {
   text-align: center;
